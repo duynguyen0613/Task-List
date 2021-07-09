@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  background: #ccc;
+  line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  */
+
+ul {
+  list-style: none;
+  max-height: 150px;
+  overflow: auto;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+a {
+  color: #333;
+}
+
+i {
+  font-size: 1.4rem;
+}
+/*  */
+.container {
+  background-color: #eee;
+  min-width: 200px;
+  min-width: 250px;
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.column {
+  width: 100%;
+}
+
+.task {
+  padding: 20px;
+}
+.task .btn {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+}
+
+.task .btn:hover,
+.task .btn:active {
+  opacity: 0.5;
+}
+
+.task h2 {
+  font-size: 2rem;
+}
+
+.task input[type="text"] {
+  color: rgb(156, 156, 156);
+  padding: 5px;
+  background-color: inherit;
+  display: block;
+  width: 100%;
+  border: 0;
+  margin: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.task input[type="text"]:focus {
+  outline: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(177, 177, 177);
+}
