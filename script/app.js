@@ -5,18 +5,31 @@ const taskFilterForm = document.querySelector(
 const newTaskInput = document.querySelector(`.task-add input[type='text']`);
 const taskUl = document.querySelector("#task-list");
 const container = document.querySelector(".container");
+const filterInput = document.querySelector(`.task-filter #task-search`);
 
 // event
 taskAddButton.addEventListener("click", onClick);
 taskFilterForm.addEventListener("click", onClick);
 
 container.addEventListener("click", deleteTask);
+filterInput.addEventListener("input", filterTask);
 
 // function
 
+function filterTask(e) {
+  const lis = document.querySelectorAll(".task-item");
+
+  lis.forEach(function (li) {
+    if (li.innerText.indexOf(e.target.value) != -1) {
+      li.style.display = "flex";
+    } else {
+      li.style.display = "none";
+    }
+  });
+}
+
 function deleteTask(e) {
   if (e.target.parentElement.classList.contains("delete-item")) {
-    console.log("yes delete.");
     e.target.parentElement.parentElement.remove();
   }
 }
