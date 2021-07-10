@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--  -->
+    <title>My Task</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex-container">
+        <div class="flex-item">
+          <h2>My Task</h2>
+          <form>
+            <div class="form-group">
+              <input
+                type="text"
+                name="task-filter"
+                id="task-filter"
+                placeholder="Search Task..."
+              />
+              <label for="task-filter"></label>
+            </div>
+            <ul id="task-collection">
+              <li class="task-item">
+                Task name
+                <a class="delete-item" href="#"><i class="fas fa-trash"></i></a>
+              </li>
+            </ul>
+            <input
+              id="task-clear"
+              type="submit"
+              value="Clear All"
+              class="btn"
+            />
+          </form>
+        </div>
+        <div class="line"></div>
+
+        <div class="flex-item">
+          <h2>Add Task</h2>
+          <form>
+            <div class="form-group">
+              <input
+                type="text"
+                name="task-add"
+                id="task-add"
+                placeholder="Add a Task..."
+              />
+              <label for="task-add"></label>
+              <input
+                id="task-submit"
+                type="submit"
+                value="Add Task"
+                class="btn"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./script/app.js"></script>
+  </body>
+</html>
