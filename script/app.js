@@ -61,7 +61,7 @@ function clearTask(e) {
   }
 
   taskList.splice(0, taskList.length);
-  localStorage.setItem("tasks", taskList);
+  localStorage.removeItem("tasks");
 }
 
 function addNewTask(e) {
