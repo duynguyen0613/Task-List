@@ -30,11 +30,11 @@ if (localStorage.getItem("tasks") != null) {
 //
 
 function filterTask(e) {
-  const filtered = e.target.value;
+  const filtered = e.target.value.toLowerCase();
   const tasks = taskUl.children;
 
   for (let i = 0; i < tasks.length; i++) {
-    if (tasks[i].innerText.indexOf(filtered) != -1) {
+    if (tasks[i].innerText.toLowerCase().indexOf(filtered) != -1) {
       tasks[i].style.display = "flex";
     } else {
       tasks[i].style.display = "none";
